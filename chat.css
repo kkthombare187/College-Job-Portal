@@ -1,0 +1,206 @@
+/* General Styles */
+body {
+    font-family: "Merriweather", serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #a8e0a1, #f4f4f4);
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav .left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+nav .buttons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    nav .left {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Main Section */
+.bg-primary {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.bg-primary .text {
+    max-width: 600px;
+}
+
+.bg-primary h1 {
+    font-size: 2.5rem;
+}
+
+.bg-primary p {
+    font-size: 1.2rem;
+}
+
+.bg-primary .image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .bg-primary {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Job Categories */
+#jobs {
+    background-color: #ebeef0;
+    padding: 50px 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+    padding: 20px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+}
+
+/* About Section */
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.about-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .about-card {
+        width: 100%;
+    }
+}
+
+/* Contact Section */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .contact-card {
+        width: 100%;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #7f7d91;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+}

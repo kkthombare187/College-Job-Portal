@@ -1,0 +1,466 @@
+body { 
+     font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #7ae76d, #f4f4f4);
+   
+    /* background-color: black; */
+}
+.navbar-brand{
+    font-family: "Merriweather", serif;
+}
+.LOGO img{
+    height: 70px;
+    width: 120px;
+    margin-right: 30px;
+  }
+
+nav {
+    
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30px;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+}
+
+nav .left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    margin-right: 29px;
+}
+
+nav .left ul {
+    list-style: none;
+    display: flex;
+    gap: 23px;
+    margin: 0;
+    padding: 0;
+}
+
+nav .left ul li a {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.3s;
+}
+
+nav .left ul li a:hover {
+    color: #007bff;
+}
+
+nav .buttons {
+    display: flex;
+    gap: 15px;
+}
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.btn {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #007bff;
+    border: 2px solid #007bff;
+    background-color: transparent;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+nav .logo {
+    position: absolute;
+    top: 70px;
+    left: 30px;
+    width: 100px;
+    height: auto;
+}
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 50px auto;
+    flex-wrap: nowrap; /* Ensures horizontal alignment */
+}
+
+.about-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 48%;
+    text-align: center;
+    transition: transform 0.3s ease;
+    flex: 1; /* Ensures equal width for both boxes */
+}
+
+.about-card:hover {
+    transform: scale(1.05);
+}
+
+/* Convert to column layout on smaller screens */
+@media (max-width: 800px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-card {
+        width: 90%; /* Takes full width but maintains margin */
+    }
+}
+
+
+.about-card h2 {
+    font-size: 1.8rem;
+    color: #007BFF;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007BFF;
+    display: inline-block;
+}
+
+.about-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+@media (max-width: 800px) {
+    .about-container {
+        flex-wrap: wrap; /* Stack the boxes vertically on small screens */
+    }
+
+    .about-card {
+        width: 100%;
+    }
+}
+
+.bg-primary {
+    margin: 59px auto;
+    width: 88%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(248, 242, 242);
+    height: 55vh;
+    padding: 50px 20px;
+    text-align: left;
+    border-radius: 5px;
+}
+
+.bg-primary .content {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+}
+
+.bg-primary .text {
+    flex: 1;
+    text-align: center;
+}
+
+.bg-primary .text h1 {
+    color: black;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.bg-primary .text p {
+    color: black;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.bg-primary .image {
+    flex: 1;
+    text-align: right;
+}
+
+.bg-primary .image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+#jobhead {
+    width:31%;
+    font-size: 2rem;
+    margin: 15px auto;
+    font-weight: bold;
+    display: flex;
+}
+
+#jobs {
+    background-color: #ebeef0;
+    padding: 50px 20px;
+}
+
+#jobs h2 {
+    width: 30%;
+    display: flex;
+    margin: 1px auto;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.card .btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.card .btn:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #7f7d91;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 767px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav .left ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav .left ul li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    section.bg-primary h1 {
+        font-size: 2rem;
+    }
+
+    section.bg-primary p {
+        font-size: 1rem;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 15px;
+}
+
+header {
+    margin: 1px auto;
+    width: 50%;
+    color: #070707;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+section {
+    max-width: 1050px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #efeded;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+   
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #3b5998;
+    border-bottom: 2px solid #3b5998;
+    display: inline-block;
+   
+}
+
+section p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.8;
+    font-weight: bold;
+   
+
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 50px auto;
+    gap: 30px;
+}
+
+.contact-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 48%; 
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    font-size: 36px;
+    color: #333333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contact-info {
+    font-size: 18px;
+    color: #555555;
+    line-height: 1.6;
+}
+
+.contact-info p {
+    margin: 15px 0;
+}
+
+.contact-info strong {
+    color: #007BFF;
+}
+
+.contact-info a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.footer {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 40px;
+    color: #777777;
+}
+
+.footer a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 700px) {
+    .contact-card {
+        width: 100%;
+    }
+}

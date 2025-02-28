@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 400px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #007bff;
+        }
+
+        input, button {
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .cancel-btn {
+            background-color: #dc3545;
+        }
+
+        .cancel-btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Edit Profile</h1>
+    <img id="profileImage" src="default.jpg" alt="Profile Image">
+    
+    <form id="editProfileForm">
+        <input type="file" id="imageInput" accept="image/jpeg">
+        <p style="font-size: 14px; color: red;">Only JPEG images are allowed.</p>
+
+        <input type="tel" id="contactInput" placeholder="Enter new contact number" required pattern="[0-9]{10}">
+        
+        <button type="submit">Save Changes</button>
+        <button type="button" class="cancel-btn" onclick="window.location.href='profile.html'">Cancel</button>
+    </form>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", async function() {
+        const email = localStorage.getItem("userEmail");
+        if (!email) {
+            alert("Please login first!");
+            window.location.href = "login.html";
+            return;
+        }
+
+        // Fetch current user data
+        const response = await fetch(`http://localhost:5000/profile?email=${email}`);
+        const userData = await response.json();
+
+        document.getElementById("profileImage").src = userData.image || "default.jpg";
+        document.getElementById("contactInput").value = userData.mobile || "";
+
+        document.getElementById("editProfileForm").addEventListener("submit", async function(e) {
+            e.preventDefault();
+
+            const contact = document.getElementById("contactInput").value;
+            const imageInput = document.getElementById("imageInput");
+            let imagePath = userData.image || "default.jpg";
+
+            // Handle Image Upload
+            if (imageInput.files.length > 0) {
+                const file = imageInput.files[0];
+                if (file.type !== "image/jpeg") {
+                    alert("Only JPEG images are allowed.");
+                    return;
+                }
+                imagePath = `uploads/${email}.jpg`; // Saving file with user's email
+            }
+
+            const updateData = { email, mobile: contact, image: imagePath };
+
+            const updateResponse = await fetch("http://localhost:6000/update-profile", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(updateData)
+            });
+
+            const result = await updateResponse.json();
+            alert(result.message);
+            window.location.href = "profile.html";
+        });
+    });
+</script>
+
+</body>
+</html>

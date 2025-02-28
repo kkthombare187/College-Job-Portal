@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-Time Job Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #7ae76d, #f4f4f4);
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .LEFT {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        nav .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+        }
+
+        nav .LEFT ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav .LEFT ul li a {
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: #000000;
+            transition: color 0.3s;
+            padding: 4px;
+        }
+
+        nav .LEFT ul li a:hover {
+            color: #007bff;
+        }
+
+        nav .buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+
+        .btn {
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            border: 2px solid #ffffff;
+            background-color: #28a745;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea,
+        button {
+            margin-top: 5px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 30%;
+            background-color:  #3dbf2f;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color:  #5aeb49;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .button-group button {
+            width: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="LEFT">
+    
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Home.html#about">About</a></li>
+                <li><a href="Home.html#jobs">Job</a></li>
+                <li><a href="Home.html#contact">Contact Us</a></li>
+            </ul>
+        </div>
+        
+    </nav>
+    <div class="container">
+        <h1>Part-Time Job Application</h1>
+        <form id="jobApplicationForm">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required pattern="[A-Za-z]+">
+
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required pattern="[A-Za-z]+">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required pattern="[a-zA-Z]+\.[a-zA-Z]+[0-9]*@vit\.edu">
+
+
+            <label for="mobile">Mobile Number</label>
+            <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}">
+
+            <label for="year">Year</label>
+            <select id="year" name="year" required>
+                <option value="">Select Year</option>
+                <option value="FY">FY</option>
+                <option value="SY">SY</option>
+                <option value="TY">TY</option>
+            </select>
+
+
+            <label for="branch">Branch</label>
+            <select id="branch" name="branch" required>
+                <option value="">Select Branch</option>
+                <option value="CS">CS</option>
+                <option value="IT">IT</option>
+                <option value="CS(AI)">CS(AI)</option>
+                <option value="CS(AIML)">CS(AIML)</option>
+                <option value="CS(SE)">CS(SE)</option>
+                <option value="CS(DS)">CS(DS)</option>
+                <option value="CS(IOT)">CS(IOT)</option>
+                <option value="ME">Mechanical</option>
+                <option value="Civil">Civil</option>
+            </select>
+
+            <label for="division">Division</label>
+            <select id="division" name="division" required>
+                <option value="">Select Division</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+                <option value="F">F</option>
+            </select>
+
+            <label for="date">Date of Work</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="timeSlot">Select Time Slot</label>
+            <select id="timeSlot" name="timeSlot" required>
+                <option value="">Select Slot</option>
+                <option value="08:00 AM - 10:00 AM">08:00 AM - 10:00 AM</option>
+                <option value="10:00 AM - 12:00 PM">10:00 AM - 12:00 PM</option>
+                <option value="12:00 PM - 02:00 PM">12:00 PM - 02:00 PM</option>
+                <option value="02:00 PM - 04:00 PM">02:00 PM - 04:00 PM</option>
+                <option value="04:00 PM - 06:00 PM">04:00 PM - 06:00 PM</option>
+            </select>
+            <label for="con_job">Conform your job</label>
+            <select id="con_job" name="con_job" required>
+                <option value="">Select job</option>
+                <option value="Canteen(Cashier)">Canteen(Cashier)</option>
+                <option value="Canteen(Server)">Canteen(Server)</option>
+                <option value="Canteen(Cleaner)">Canteen(Cleaner)</option>
+                <option value="Library( Organizer)</">Library( Organizer)</option>
+                <option value="Library( Assistant)">Library( Assistant)</option>
+                <option value="Healthcare(Receptionist)">Healthcare(Receptionist)</option>
+                <option value="Healthcare(Helper)">Healthcare(Helper)</option>
+                <option value="Cleaning( Cleaner)">Cleaning( Cleaner)</option>
+                <option value="Cleaning( Event Setup)">Cleaning( Event Setup)</option>
+            </select>
+
+
+            <label for="experience">Experience (if any)</label>
+            <textarea id="experience" name="experience" rows="4"></textarea>
+
+            <div class="error" id="errorMessage"></div>
+
+            <div class="button-group">
+                <button type="button" id="backButton">Back</button>
+                <button type="submit">Apply</button>
+                <button type="button" id="changeJobButton">Change Job</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+      
+        document.addEventListener("DOMContentLoaded", function () {
+            // Prevent selecting past dates
+            const dateInput = document.getElementById("date");
+            const today = new Date().toISOString().split("T")[0];
+            dateInput.setAttribute("min", today);
+        
+            // Handle form submission
+            document.getElementById("jobApplicationForm").addEventListener("submit", async function (e) {
+                e.preventDefault();
+        
+                const errorMessage = document.getElementById("errorMessage");
+                errorMessage.textContent = ""; // Clear previous errors
+        
+                // Get form values
+                const formData = {
+                    firstName: document.getElementById("firstName").value,
+                    lastName: document.getElementById("lastName").value,
+                    email: document.getElementById("email").value,
+                    mobile: document.getElementById("mobile").value,
+                    year: document.getElementById("year").value,
+                    branch: document.getElementById("branch").value,
+                    division: document.getElementById("division").value,
+                    date: document.getElementById("date").value,
+                    timeSlot: document.getElementById("timeSlot").value,
+                    con_job: document.getElementById("con_job").value,
+                    experience: document.getElementById("experience").value.trim() // Trim to remove extra spaces
+                };
+        
+                // Validate date (no past dates allowed)
+                const selectedDate = new Date(formData.date);
+                const currentDate = new Date();
+                currentDate.setHours(0, 0, 0, 0);
+        
+                if (selectedDate < currentDate) {
+                    errorMessage.textContent = "Invalid date! Please select a future date.";
+                    return;
+                }
+        
+                // Send data to backend
+                try {
+                    const response = await fetch("http://localhost:8000/apply-job", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(formData)
+                    });
+        
+                    const result = await response.json();
+                    if (response.ok) {
+                        alert("Application submitted successfully!");
+                        window.location.href = "Home.html"; // Redirect after successful submission
+                    } else {
+                        errorMessage.textContent = result.message || "Error submitting application!";
+                    }
+                } catch (error) {
+                    errorMessage.textContent = "Failed to connect to the server!";
+                }
+            });
+        
+            // Back button functionality
+            document.getElementById("backButton").addEventListener("click", function () {
+                window.history.back();
+            });
+        
+            // Change Job button functionality
+            document.getElementById("changeJobButton").addEventListener("click", function () {
+                window.location.href = "Home.html#jobs";
+            });
+        });
+        
+        
+
+    </script>
+</body>
+
+</html>
+
+
+

@@ -1,0 +1,4 @@
+server.js  = email sent 
+.env  = also of email sent 
+auth.js, backend.js, database.js is of backend registration
+users name database will create on my sql

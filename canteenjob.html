@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canteen Jobs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body{
+            background: linear-gradient(to right, #7ae76d, #f4f4f4);
+        }
+          nav {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            
+        }
+
+        nav .left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        nav .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+        }
+
+        nav .left ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav .left ul li a {
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: #000000;
+            transition: color 0.3s;
+            padding: 4px;
+        }
+
+        nav .left ul li a:hover {
+            color: #007bff;
+        }
+
+        nav .buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #f5f7f9;
+            border: 2px solid #ffffff;
+            background-color:#28a745;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        nav .logo {
+            position: absolute;
+            top: 70px;
+            left: 30px;
+            width: 100px;
+            height: auto;
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column; 
+        }
+
+        
+        .content {
+            flex-grow: 1; 
+        }
+
+
+        .card {
+            margin-bottom: 20px;
+            height: 100%; 
+        }
+
+      
+        .card-body {
+            padding: 20px;
+        }
+
+
+        .btn-success {
+            background-color: #28a745; 
+            border-color: #28a745; 
+        }
+
+        .mt-3 {
+            margin-top: 15px;
+        }
+
+        h6 {
+            font-weight: bold;
+        }
+
+       
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        @media (max-width: 768px) {
+            .col-md-4 {
+                flex: 0 0 100%;
+            }
+        }
+
+      
+        .container {
+            max-width: 1200px; 
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .row .col-md-4 {
+            width: 32%; 
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="left">
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Home.html#about">About</a></li>
+                <li><a href="Home.html#jobs">Job</a></li>
+                <li><a href="Home.html#contact">Contact Us</a></li>
+            </ul>
+        </div>
+        
+    </nav>
+
+    <section class="py-5 content">
+        <div class="container">
+            <h2 class="text-center mb-4">Canteen Jobs</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Cashier</h5>
+                            <p class="card-text">Manage cash transactions in the canteen.</p>
+                            <a href="Appliform.html" class="btn btn-success">Apply Now</a>
+                            <div class="mt-3">
+                                <h6>Reviews:</h6>
+                                <p>"Great opportunity for learning."</p>
+                                <p>"Flexible hours and supportive staff."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Server</h5>
+                            <p class="card-text">Serve food and beverages to students.</p>
+                            <a href="Appliform.html" class="btn btn-success">Apply Now</a>
+                            <div class="mt-3">
+                                <h6>Reviews:</h6>
+                                <p>"Good pay for part-time work."</p>
+                                <p>"Enjoyable working environment."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Cleaner</h5>
+                            <p class="card-text">Ensure cleanliness in the canteen area.</p>
+                            <a href="Appliform.html" class="btn btn-success">Apply Now</a>
+                            <div class="mt-3">
+                                <h6>Reviews:</h6>
+                                <p>"Well-organized management."</p>
+                                <p>"Appreciated for maintaining hygiene."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 College Job Portal. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
